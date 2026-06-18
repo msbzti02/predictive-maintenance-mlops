@@ -1,4 +1,4 @@
-# NASA Turbofan MLOps
+# predictive-maintenance-mlops
 
 <div align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue.svg" alt="Python Version">
@@ -66,7 +66,7 @@
 The repository follows a modular, separation-of-concerns architecture designed for enterprise ML projects.
 
 ```text
-nasa-turbofan-mlops/
+predictive-maintenance-mlops/
 ├── configs/                  # Centralized configuration management
 │   └── config.yaml           # Global parameters (hyperparameters, paths)
 ├── data/                     # Data lake architecture
@@ -97,7 +97,7 @@ nasa-turbofan-mlops/
 
 ## 📖 Project Overview
 
-**NASA Turbofan MLOps** is a comprehensive predictive maintenance solution. 
+**predictive-maintenance-mlops** is a comprehensive predictive maintenance solution. 
 
 While many AI projects end at a Jupyter Notebook, this project treats the machine learning model as a dynamic software asset. It implements a fully automated pipeline (`run_pipeline.py`) that ingests raw telemetry data from engines, processes it, trains models, tunes them, explains their behavior, registers the best candidate, and deploys it as a REST API.
 
@@ -415,7 +415,7 @@ flowchart LR
 
 ## 🤝 Contributors
 
-* **[Your Name/Zubir]** - *Lead ML/DevOps Engineer* - Pipeline Architecture & Model Training
+* **MOURAD SLEEM** - *Lead ML/DevOps Engineer* - Pipeline Architecture & Model Training
 
 ---
 
