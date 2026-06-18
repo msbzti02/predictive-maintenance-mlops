@@ -1,0 +1,20 @@
+data:
+  train_path: "data/processed/train.csv"
+  test_path:  "data/processed/test.csv"
+  target_col: "RUL"
+  drop_cols:  ["engine_id", "cycle"]
+
+mlflow:
+  tracking_uri:    "sqlite:///mlflow.db"
+  experiment_name: "Predictive_Maintenance_RUL"
+
+optuna:
+  n_trials: 10
+
+output:
+  plots_dir:   "outputs/plots"
+  reports_dir: "outputs/reports"
+
+serve:
+  host: "0.0.0.0"
+  port: 8000

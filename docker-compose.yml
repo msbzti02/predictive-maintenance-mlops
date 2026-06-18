@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  # 1. The MLflow Tracking Server
+  mlflow-server:
+    image: python:3.10-slim
+    container_name: mlflow_tracking
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: >
+      bash -c "pip install mlflow && mlflow ui --backend-store-uri sqlite:///mlflow.db --host 0.0.0.0"
+
+  # 2. The Production FastAPI Model Server
+  model-api:
+    build: .
+    container_name: predictive_maintenance_api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mlflow-server
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow-server:5000
